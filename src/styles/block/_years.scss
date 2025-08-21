@@ -1,0 +1,12 @@
+.years {
+  display: flex;
+  font-size: 200px;
+  font-weight: 700;
+  margin-left: 120px;
+  &-first {
+    color: var(--color-blue);
+  }
+  &-last {
+    color: var(--color-pink);
+  }
+}

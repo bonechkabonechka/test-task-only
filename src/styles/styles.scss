@@ -1,0 +1,4 @@
+@import 'normalize', 'fonts', 'mixins', 'media', 'variables', 'utils', 'globals';
+
+@import 'block/home', 'block/wrapper', 'block/historical-dates', 'block/years',
+  'block/circular-navigation', 'block/events', 'block/categories';

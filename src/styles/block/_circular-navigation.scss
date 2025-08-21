@@ -1,0 +1,87 @@
+.circular {
+  position: relative;
+  &-navigation {
+    position: absolute;
+    left: 600px;
+    top: 170px;
+    width: 530px;
+    height: 530px;
+    pointer-events: none;
+    z-index: 2;
+
+    &__track {
+      position: absolute;
+      width: 530px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid var(--color-black-blue);
+      opacity: 0.2;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+    }
+
+    &__point-container {
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    &__point-wrapper {
+      position: relative;
+      left: 265px; // radius
+    }
+
+    &__point {
+      position: relative;
+      width: 6px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: all 0.3s ease;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        pointer-events: auto;
+        cursor: pointer;
+      }
+      // Состояние по умолчанию
+      &--default {
+        background-color: var(--color-black-blue);
+      }
+
+      &:hover {
+        width: 56px;
+        left: -20px;
+        top: -20px;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(66, 86, 122, 0.5);
+        background: #fff;
+      }
+
+      &--active {
+        background-color: var(--color-black-blue);
+      }
+    }
+
+    &__tooltip {
+      font-size: 20px;
+      pointer-events: none;
+      transform: translate(5%, -210%);
+    }
+
+    &__category-label {
+      position: absolute;
+      color: var(--color-black-blue);
+      font-size: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+      top: -10px;
+      left: 60px;
+    }
+  }
+}
